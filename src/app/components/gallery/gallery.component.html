@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
     <div class="product-display">
-        <div *ngFor="let artItems of art">
+        <div *ngFor="let artItems of art | paginate : { itemsPerPage: 16, currentPage:p}">
             <div class="product-card">
                 <div class="imageHolder">
                     <img class="img-main" src="https://www.artic.edu/iiif/2/{{artItems.image_id}}/full/843,/0/default.jpg" alt="">
@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    
+    <pagination-controls (pageChange)="p=$event" class="pagination"></pagination-controls>
     <!-- <div *ngFor="let fakeItems of fake">
         <div class="product-card">
             <div class = "imageHolder">

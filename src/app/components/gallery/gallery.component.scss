@@ -61,3 +61,11 @@
     align-items: center;
 }
 
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.ngx-pagination .current{
+    background-color: #fff ;
+}

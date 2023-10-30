@@ -8,6 +8,7 @@ import { ArtDataService } from 'src/app/services/art-data.service';
 })
 export class GalleryComponent {
 
+  p:any;
   art:any;
   fake:any;
   constructor(private artData:ArtDataService, private fakeData:ArtDataService){

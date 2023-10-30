@@ -9,6 +9,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatPaginatorModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
