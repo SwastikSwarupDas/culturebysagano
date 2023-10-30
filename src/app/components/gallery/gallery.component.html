@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+    <div class="product-display">
+        <div *ngFor="let artItems of art">
+            <div class="product-card">
+                <div class="imageHolder">
+                    <img class="img-main" src="https://www.artic.edu/iiif/2/{{artItems.image_id}}/full/843,/0/default.jpg" alt="">
+                </div>
+                <div class = "title-main">
+                    {{artItems.title.substring(0,20)}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- <div *ngFor="let fakeItems of fake">
+        <div class="product-card">
+            <div class = "imageHolder">
+                <img class="img-main" src="{{fakeItems.image}}" alt="">
+            </div>
+            <div class = "title-main">
+                {{fakeItems.title.substring(0,20)}}
+            </div>
+        </div>
+    </div> -->
+
+

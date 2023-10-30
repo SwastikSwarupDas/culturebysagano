@@ -1,0 +1,38 @@
+.mat-toolbar{
+    position: fixed;
+    z-index: 2;
+}
+
+.blackBar{
+    display: flex;
+    background-color: rgb(41, 41, 41);
+    height: 2vw;
+    gap: 3vw;
+    justify-content: center;
+    padding: 0vw 2vw;
+}
+
+.blackBar a{
+    font-size: 0.8vw;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header{
+    color: #868686;
+    font-size: 1vw;
+    letter-spacing: 0.6vw;
+    padding: 0vw 1vw;
+}
+
+.logo  {
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: 0.5vw;
+}
+
+
+
+
+
+
