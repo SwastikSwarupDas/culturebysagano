@@ -1,10 +1,44 @@
 .header{
-    background: rgb(130, 160, 97);
     color: #fff;
     font-size: 4vw;
     letter-spacing: 0.6vw;
-    padding: 5vw 0vw 0vw 2vw;
+    padding: 5vw 0vw 0vw 5vw;
     line-height: 7vw;
+}
+
+.img-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 180vh;
+    overflow-x: hidden;
+    background-image: url('../../../assets/G17.webp');
+}
+
+.img-div p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15vw;
+    padding: 5vw 0 0 0;
+    color: #262627;
+    width: 100vw;
+}
+
+.gallery-btn{
+    width: 20vw;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    border: none;
+    font-size: 2vw;
+    border-radius: 1vw;
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 100;
+        letter-spacing: 0.4vw;
+    }
 }
 
 .logo  {

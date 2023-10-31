@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { SharedService } from '../../services/shared.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,19 +9,20 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class NavbarComponent {
   fg: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private sharedService:SharedService) {
     this.fg = this.fb.group({ alphaControl: '' });
   }
+
   oninput() {
     if (this.fg) {
       let str = this.fg.value.alphaControl;
       console.log(str);
-      
+      this.sharedService.setSearchValue(str);
     }
   }
 
-  disabled:boolean=false;
-  renderSearch(){
-    this.disabled=!this.disabled;
+  disabled: boolean = false;
+  renderSearch() {
+    this.disabled = !this.disabled;
   }
 }

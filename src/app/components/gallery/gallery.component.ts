@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ArtDataService } from 'src/app/services/art-data.service';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-gallery',
@@ -9,9 +10,19 @@ import { ArtDataService } from 'src/app/services/art-data.service';
 export class GalleryComponent {
   pageNoStartingValue=1;
   art: any;
+  searchValue:string='';
 
-  constructor(private artDataService: ArtDataService) {
+  constructor(private artDataService: ArtDataService, private sharedService:SharedService) {
     this.getData()
+  }
+  ngOnInit()
+  {
+    this.sharedService.searchValue$.subscribe((value) => { this.searchValue = value;
+
+      this.artDataService.getResponseBySearch(value).subscribe((response) => {
+        this.art = response.data;
+      });
+     })
   }
 
   getData() {

@@ -69,3 +69,43 @@
 .ngx-pagination .current{
     background-color: #fff ;
 }
+
+.page-item{
+    display: flex;
+    align-items: flex-end;
+}
+
+.pag-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1vw;
+  
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: #000;
+    color: rgba(0,0,0,0.4);
+}
+
+.pg-inac{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1vw;
+    
+    font-size: 1.2vw ;
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+}
+
+.pg-ac{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5vw;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 0.2vw;
+    font-size: 1.4vw ;
+    text-decoration: none;
+    color: rgba(0,0,0,0.8);
+}

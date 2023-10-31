@@ -17,7 +17,7 @@ export class ArtDataService {
   }
   getResponseBySearch(search:string)
   {
-    return this.artPull.get<any>(` https://api.artic.edu/api/v1/artworks/search?q=${search}`);
+    return this.artPull.get<any>(` https://api.artic.edu/api/v1/artworks/search?q=${search}?fields=id,title,artist_display,date_display,main_reference_number,image_id`);
   }
 
 }

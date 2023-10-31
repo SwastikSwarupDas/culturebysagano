@@ -15,15 +15,15 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" aria-label="Previous" (click)="renderPreviousPageData()">
+            <a class="pag-btn" *ngIf="pageNoStartingValue>1" aria-label="Previous" (click)="renderPreviousPageData()">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link " *ngIf="pageNoStartingValue>1" (click)="renderPageByPgNo(pageNoStartingValue-1)">{{pageNoStartingValue-1}}</a></li>
-          <li class="page-item"><a class="page-link active"  (click)="renderPageByPgNo(pageNoStartingValue)">{{pageNoStartingValue}}</a></li>
-          <li class="page-item"><a class="page-link"  (click)="renderPageByPgNo(pageNoStartingValue+1)">{{pageNoStartingValue+1}}</a></li>
+          <li class="page-item"><a class="pg-inac" *ngIf="pageNoStartingValue>1" (click)="renderPageByPgNo(pageNoStartingValue-1)">{{pageNoStartingValue-1}}</a></li>
+          <li class="page-item"><a class="pg-ac"  (click)="renderPageByPgNo(pageNoStartingValue)">{{pageNoStartingValue}}</a></li>
+          <li class="page-item"><a class="pg-inac"  (click)="renderPageByPgNo(pageNoStartingValue+1)">{{pageNoStartingValue+1}}</a></li>
           <li class="page-item">
-            <a class="page-link"  aria-label="Next" (click)="renderNextPageData()">
+            <a class="pag-btn" aria-label="Next" (click)="renderNextPageData()">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
