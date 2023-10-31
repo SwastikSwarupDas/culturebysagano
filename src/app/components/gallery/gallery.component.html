@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
     <div class="product-display">
-        <div *ngFor="let artItems of art | paginate : { itemsPerPage: 16, currentPage:p}">
+        <div *ngFor="let artItems of art">
             <div class="product-card">
                 <div class="imageHolder">
                     <img class="img-main" src="https://www.artic.edu/iiif/2/{{artItems.image_id}}/full/843,/0/default.jpg" alt="">
@@ -12,17 +12,26 @@
             </div>
         </div>
     </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" aria-label="Previous" (click)="renderPreviousPageData()">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link " *ngIf="pageNoStartingValue>1" (click)="renderPageByPgNo(pageNoStartingValue-1)">{{pageNoStartingValue-1}}</a></li>
+          <li class="page-item"><a class="page-link active"  (click)="renderPageByPgNo(pageNoStartingValue)">{{pageNoStartingValue}}</a></li>
+          <li class="page-item"><a class="page-link"  (click)="renderPageByPgNo(pageNoStartingValue+1)">{{pageNoStartingValue+1}}</a></li>
+          <li class="page-item">
+            <a class="page-link"  aria-label="Next" (click)="renderNextPageData()">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-    <pagination-controls (pageChange)="p=$event" class="pagination"></pagination-controls>
-    <!-- <div *ngFor="let fakeItems of fake">
-        <div class="product-card">
-            <div class = "imageHolder">
-                <img class="img-main" src="{{fakeItems.image}}" alt="">
-            </div>
-            <div class = "title-main">
-                {{fakeItems.title.substring(0,20)}}
-            </div>
-        </div>
-    </div> -->
+
+
+   
 
 

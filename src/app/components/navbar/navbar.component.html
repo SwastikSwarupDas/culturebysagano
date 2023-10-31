@@ -13,6 +13,12 @@
         <a href="http://">BUY TICKETS</a>
         <a href="http://">BECOME A MEMBER</a>
         <a href="http://">SHOP</a>
+        <i class="ri-search-line" (click)="renderSearch()"></i>
+    </mat-toolbar-row>
+    <mat-toolbar-row *ngIf="disabled" class="blackBar">
+        <form [formGroup]="fg">
+            <input class="search-bar" formControlName="alphaControl" type="text" placeholder="looking for something?" (input)="oninput()">
+        </form>
     </mat-toolbar-row>
 </mat-toolbar>
 
