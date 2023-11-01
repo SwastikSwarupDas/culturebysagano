@@ -8,16 +8,16 @@ import { SharedService } from '../../services/shared.service';
 })
 export class NavbarComponent {
   fg: FormGroup;
-
+  search! : string;
   constructor(private fb: FormBuilder, private sharedService:SharedService) {
     this.fg = this.fb.group({ alphaControl: '' });
   }
 
   oninput() {
     if (this.fg) {
-      let str = this.fg.value.alphaControl;
-      console.log(str);
-      this.sharedService.setSearchValue(str);
+      // let str = this.fg.value.alphaControl;
+      // console.log(str);
+      this.sharedService.setSearchValue(this.search);
     }
   }
 

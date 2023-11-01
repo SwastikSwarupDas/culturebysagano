@@ -11,13 +11,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SelectionsComponent } from './components/selections/selections.component';
+import { MatChipsModule } from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     GalleryComponent,
-    NavbarComponent
+    NavbarComponent,
+    SelectionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MatToolbarModule,
     MatPaginatorModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

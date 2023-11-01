@@ -1,25 +1,26 @@
 <mat-toolbar>
   <mat-toolbar-row>
+    <a routerLink="">
     <div class="header">
-      ART INSTITVTE
-      <div class="logo">CHICAGO</div>
+      CULTURE BY
+      <div class="logo">SAGANO</div>
     </div>
+    </a>
   </mat-toolbar-row>
   <mat-toolbar-row class="blackBar">
     <a href="http://">ABOUT US</a>
     <a href="http://">ARTISTS</a>
     <a href="http://">BUY TICKETS</a>
     <a href="http://">BECOME A MEMBER</a>
-    <a href="http://">SHOP</a>
+    <a routerLink="/selections">SELECTIONS</a>
     <i class="ri-search-line" (click)="renderSearch()"></i>
   </mat-toolbar-row>
   <mat-toolbar-row *ngIf="disabled" class="blackBar">
-    <form [formGroup]="fg">
+    <form class="search-bar" [formGroup]="fg">
       <input
-        class="search-bar"
         formControlName="alphaControl"
         type="text"
-        placeholder="looking for something?"
+        placeholder="looking for something?" [(ngModel)]="search"
         (input)="oninput()"
       />
     </form>

@@ -41,7 +41,41 @@
     opacity: 0.7; /* Adjust the opacity to control the intensity of the overlay */
 }
 
+.card-stuff{
+    z-index: 1;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.add-btn{
+    color: #ffffffc5;
+    border: 3px solid #ffffffc5;;
+    border-radius: 0.8vw;
+    padding: 0.2vw 0.6vw;
+    font-weight: 800;
+    font-family: 'Gabarito';
+}
+
+.add-btn:hover{
+    cursor: pointer;
+}
+
+.check{
+    font-weight: 800;
+    color: rgb(22, 188, 19);
+}
+
+.product-card:hover .check {
+    border: 3px solid rgb(185, 255, 184);;
+    border-radius: 0.8vw;
+    padding: 0.2vw 0.6vw;
+    color: rgb(185, 255, 184);
+    cursor: pointer;
+}
+
 .title-main {
+    font-family: 'Gabarito';
     font-weight: 100;
     letter-spacing: 0.1vw;
     color: #000; /* Set the initial color of the title */
@@ -73,26 +107,36 @@
 .page-item{
     display: flex;
     align-items: flex-end;
+    font-family: 'Gabarito';
 }
 
 .pag-btn{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1vw;
-  
+    width: 1.8vw;
+    font-family: 'Gabarito';
     font-size: 1.2vw;
     text-decoration: none;
     color: #000;
     color: rgba(0,0,0,0.4);
+    scale: 1;
+    transition: scale 0.1s;
+}
+
+.pag-btn:hover{
+    cursor: pointer;
+    scale:1.1;
+    background-color: #00000010;
+    border-radius: 0.2vw ;
 }
 
 .pg-inac{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1vw;
-    
+    width: 1.8vw;
+    font-family: 'Gabarito';
     font-size: 1.2vw ;
     text-decoration: none;
     color: rgba(0,0,0,0.5);
@@ -102,7 +146,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5vw;
+    width: 1.8vw;
+    font-family: 'Gabarito';
     background-color: rgba(0,0,0,0.1);
     border-radius: 0.2vw;
     font-size: 1.4vw ;

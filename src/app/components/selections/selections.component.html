@@ -1,0 +1,37 @@
+
+<app-navbar></app-navbar>
+<div class="sad-txt" *ngIf="selectionsService.selected.length===0">
+  <div class="txt" style="display: flex; align-items: center; gap:1vw;">
+    Your artistic <p class="attention">Odyssey</p> awaits. 
+  </div>
+  <a routerLink="/gallery">
+  <div class="discover">
+    discover the unseen
+  </div>
+</a>
+</div>
+    <div class="product-display">
+        <div *ngFor="let artItems of art">
+            <div class="product-card">
+                <div class="imageHolder">
+                    <img class="img-main" src="https://www.artic.edu/iiif/2/{{artItems.image_id}}/full/843,/0/default.jpg" alt="">
+                </div>
+                <div class="card-stuff">
+                  <div class = "title-main">
+                    {{artItems.title.substring(0,20)}}
+                  </div>
+                  <div (click)="addToSelections(artItems)">
+                    <span *ngIf="selectionsService.isPresent(artItems)" class="check"><i class="ri-check-line"></i></span>
+                    <span *ngIf="!selectionsService.isPresent(artItems)" class="add-btn">+</span>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+   
+
+

@@ -6,9 +6,15 @@
                 <div class="imageHolder">
                     <img class="img-main" src="https://www.artic.edu/iiif/2/{{artItems.image_id}}/full/843,/0/default.jpg" alt="">
                 </div>
-                <div class = "title-main">
+                <div class="card-stuff">
+                  <div class = "title-main">
                     {{artItems.title.substring(0,20)}}
-                </div>
+                  </div>
+                  <div (click)="addToSelections(artItems)">
+                    <span *ngIf="selectionsService.isPresent(artItems)" class="check"><i class="ri-check-line"></i></span>
+                    <span *ngIf="!selectionsService.isPresent(artItems)" class="add-btn">+</span>
+                  </div>
+              </div>
             </div>
         </div>
     </div>

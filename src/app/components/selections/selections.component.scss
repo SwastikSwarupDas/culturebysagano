@@ -1,0 +1,183 @@
+.img-main {
+  width: 18vw;
+}
+
+.imageHolder {
+  height: 25vw;
+  display: flex;
+  align-items: center;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 21vw;
+  height: 32vw;
+  border-radius: 1vw;
+  margin: 2vw 0vw;
+  padding: 2vw 1vw;
+  position: relative;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5674720571822479) 0%,
+    rgba(133, 133, 133, 0.2229342420561975) 53%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  opacity: 0;
+  transition: opacity 0.3s; /* Add a smooth transition effect */
+}
+
+.product-card:hover::before {
+  opacity: 0.7; /* Adjust the opacity to control the intensity of the overlay */
+}
+
+.card-stuff {
+  z-index: 1;
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+
+.add-btn {
+  color: #ffffffc5;
+  border: 3px solid #ffffffc5;
+  border-radius: 0.8vw;
+  padding: 0.2vw 0.6vw;
+  font-weight: 800;
+}
+
+.check {
+  font-weight: 800;
+  color: rgb(22, 188, 19);
+}
+
+.product-card:hover .check {
+  border: 3px solid rgb(185, 255, 184);
+  border-radius: 0.8vw;
+  padding: 0.2vw 0.6vw;
+  color: rgb(185, 255, 184);
+}
+
+.title-main {
+  font-weight: 100;
+  letter-spacing: 0.1vw;
+  color: #000; /* Set the initial color of the title */
+  transition: color 0.3s;
+  z-index: 1;
+}
+
+.product-card:hover .title-main {
+  color: #fff; /* Change the color of the title on hover */
+}
+
+.product-display {
+  padding: 7vw 0vw 0vw 0vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.discover {
+  background-color: #d9e6e9;
+  padding: 0 1vw;
+  border-radius: 0.8vw;
+  color: #a5b8bc;
+  font-style: italic;
+  font-family: "DM Serif Display";
+  font-size: 1.5vw;
+  transition: color 0.3s , background-color 0.3s ease-in-out ;
+}
+
+.discover:hover {
+  background-color: #9ab9c0;
+  color: #c0efff;
+  cursor: pointer;
+}
+
+.sad-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7vw;
+  background-color: rgba(202, 216, 218, 0.4);
+  height: 90vh;
+  font-size: 3vw;
+  .txt {
+    color: #a5b8bc;
+    font-family: "DM Serif Display";
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
+.attention {
+  color: #9ac4d4;
+  font-family: "DM Serif Display";
+  font-size: 6vw;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.ngx-pagination .current {
+  background-color: #fff;
+}
+
+.page-item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.pag-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1vw;
+
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: #000;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pg-inac {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1vw;
+
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pg-ac {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5vw;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.2vw;
+  font-size: 1.4vw;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
