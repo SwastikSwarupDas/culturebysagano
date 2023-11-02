@@ -13,6 +13,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SelectionsComponent } from './components/selections/selections.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { ShowcaseComponent } from './components/showcase/showcase.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MatChipsModule } from '@angular/material/chips';
     GalleryComponent,
     NavbarComponent,
     SelectionsComponent,
+    ShowcaseComponent,
   ],
   imports: [
     BrowserModule,
